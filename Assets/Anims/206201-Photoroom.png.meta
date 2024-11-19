@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c93cd97bae9c7b84aaa820987bf9fc6b
+guid: 5aa90eccb5362854dbb110ce239ab8ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soldier_0
+      name: 206201-Photoroom_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 132
-        width: 64
-        height: 64
+        x: 36
+        y: 258
+        width: 53
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2055d787a24278047ba773d17250c861
-      internalID: 1062810044
+      spriteID: 179605489a5f4434ea8de88d86c74620
+      internalID: 198217546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_1
+      name: 206201-Photoroom_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 132
-        width: 64
-        height: 64
+        x: 144
+        y: 234
+        width: 84
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 554c3980f172f0c4d9381202fa3aa8cc
-      internalID: -1575261248
+      spriteID: a03bae2b6590693498441b3fe228f403
+      internalID: -1686071225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_2
+      name: 206201-Photoroom_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 132
-        width: 64
-        height: 64
+        x: 288
+        y: 258
+        width: 66
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84b28336b09333649929d9a5e0b2ee5a
-      internalID: -1447716408
+      spriteID: b8456726aeb5ad447915c0f2cc26a734
+      internalID: 963288690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_3
+      name: 206201-Photoroom_24
       rect:
         serializedVersion: 2
-        x: 192
-        y: 132
-        width: 64
-        height: 64
+        x: 18
+        y: 130
+        width: 90
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326eede6b83eb3b499663f76270eb062
-      internalID: -972452109
+      spriteID: 117ab8e00a71ebd43b4d068af00e9de9
+      internalID: 1199671533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_4
+      name: 206201-Photoroom_25
       rect:
         serializedVersion: 2
-        x: 0
-        y: 68
-        width: 64
-        height: 64
+        x: 150
+        y: 126
+        width: 84
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df4cba079b9dd384a9ed516336a5f23f
-      internalID: 544057297
+      spriteID: 7671b60267bac6445bb9e8c5dfb9e59e
+      internalID: 263753809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_5
+      name: 206201-Photoroom_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 68
-        width: 64
-        height: 64
+        x: 282
+        y: 126
+        width: 84
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cfc13c415a84d49902acf2e9c541d1
-      internalID: 1148956574
+      spriteID: 0411340bb3dac68468863408ea4d84e8
+      internalID: 361000907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_6
+      name: 206201-Photoroom_29
       rect:
         serializedVersion: 2
-        x: 128
-        y: 68
-        width: 64
-        height: 64
+        x: 408
+        y: 126
+        width: 84
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a14d49b5a5a1094c9b864afa8432462
-      internalID: 1354075709
+      spriteID: 07f9928e974572549ad5c87e3c6000e4
+      internalID: 235233199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_7
+      name: 206201-Photoroom_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 68
-        width: 64
-        height: 64
+        x: 42
+        y: 0
+        width: 52
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91271811f0a517944a0f331404ada910
-      internalID: 515230190
+      spriteID: 914e72aef6a0c9e41805b083953a60bb
+      internalID: 1251185182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_8
+      name: 206201-Photoroom_31
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 64
-        height: 64
+        x: 162
+        y: 10
+        width: 90
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 706117e1d87382c4e9f24d97ffc38b56
-      internalID: -460863425
+      spriteID: 18cda973b9e5dfe47a82b441eb14a1dc
+      internalID: -1014836261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_9
+      name: 206201-Photoroom_34
       rect:
         serializedVersion: 2
-        x: 64
-        y: 4
-        width: 64
-        height: 64
+        x: 288
+        y: 11
+        width: 96
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e4152f2b6e68ee468f52a6daa24b9aa
-      internalID: 1783153432
+      spriteID: d1f282e8f125ba44d96f6095981b85d4
+      internalID: -100692066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soldier_10
+      name: 206201-Photoroom_38
       rect:
         serializedVersion: 2
-        x: 128
-        y: 4
-        width: 64
-        height: 64
+        x: 429
+        y: 0
+        width: 84
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,30 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9398a285d78006479e848bdae8ae193
-      internalID: 1127420741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soldier_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 4
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07c4997c59e67ba4fa1ef358bd78e3ca
-      internalID: -490743891
+      spriteID: 7ab6252b63be5b241a39413ec1ee153f
+      internalID: -1289734732
       vertices: []
       indices: 
       edges: []
@@ -403,7 +381,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bca6724b7d04ef04380c704c4308d784
+    spriteID: aaa4f4ef7613335499a296f1a3ce82a0
     internalID: 0
     vertices: []
     indices: 
@@ -413,18 +391,47 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      soldier_0: 1062810044
-      soldier_1: -1575261248
-      soldier_10: 1127420741
-      soldier_11: -490743891
-      soldier_2: -1447716408
-      soldier_3: -972452109
-      soldier_4: 544057297
-      soldier_5: 1148956574
-      soldier_6: 1354075709
-      soldier_7: 515230190
-      soldier_8: -460863425
-      soldier_9: 1783153432
+      206201-Photoroom_0: 945725381
+      206201-Photoroom_1: -378011560
+      206201-Photoroom_10: 198217546
+      206201-Photoroom_11: -1686071225
+      206201-Photoroom_12: 963288690
+      206201-Photoroom_13: -1691846114
+      206201-Photoroom_14: -993051501
+      206201-Photoroom_15: 1077705200
+      206201-Photoroom_16: -933433217
+      206201-Photoroom_17: -327579332
+      206201-Photoroom_18: -1214966303
+      206201-Photoroom_19: -1401177920
+      206201-Photoroom_2: -320801540
+      206201-Photoroom_20: -457747648
+      206201-Photoroom_21: -1943957520
+      206201-Photoroom_22: -1433453691
+      206201-Photoroom_23: -737437283
+      206201-Photoroom_24: 1199671533
+      206201-Photoroom_25: 263753809
+      206201-Photoroom_26: -1001595289
+      206201-Photoroom_27: 1165282058
+      206201-Photoroom_28: 361000907
+      206201-Photoroom_29: 235233199
+      206201-Photoroom_3: -2048176250
+      206201-Photoroom_30: 1251185182
+      206201-Photoroom_31: -1014836261
+      206201-Photoroom_32: 2084106149
+      206201-Photoroom_33: 31350546
+      206201-Photoroom_34: -100692066
+      206201-Photoroom_35: 1334374990
+      206201-Photoroom_36: 893282280
+      206201-Photoroom_37: -1175417196
+      206201-Photoroom_38: -1289734732
+      206201-Photoroom_39: -2061354756
+      206201-Photoroom_4: -347607432
+      206201-Photoroom_40: -402374182
+      206201-Photoroom_5: 472017679
+      206201-Photoroom_6: -2027638928
+      206201-Photoroom_7: 219183867
+      206201-Photoroom_8: 1396963397
+      206201-Photoroom_9: 987568887
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

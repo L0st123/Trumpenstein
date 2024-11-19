@@ -15,6 +15,6 @@ public class DynamicJoystickExample : MonoBehaviour
               // Apply sensitivity
         float mouseX = horizontal * sensitivity;
             // Rotate player horizontally (yaw)
-        playerBody.Rotate(Vector3.up * mouseX);
+        playerBody.Rotate(Vector2.up * mouseX);
     }
 }
