@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class Door_Open : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public Animator animator;
+    public bool door;
+   // public AudioSource DoorOpen;
+
+
+
     void Start()
     {
-        
+        door = false;
+        animator.SetBool("Open", false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseUpAsButton()
     {
-        
+        Debug.Log(gameObject.name + " is pressed");
+        door = true;
+        animator.SetBool("Open", true);
+      // DoorOpen.Play();
+
     }
+
+
 }
