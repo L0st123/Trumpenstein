@@ -15,7 +15,7 @@ public class Door_Open : MonoBehaviour
         animator.SetBool("Open", false);
     }
 
-    private void OnMouseUpAsButton()
+    private void OnMouseDown()
     {
         Debug.Log(gameObject.name + " is pressed");
         door = true;

@@ -22,6 +22,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Start()
     {
+      
       animator = GetComponent<Animator>();  
       animator.SetBool("Walk", false);
     }
