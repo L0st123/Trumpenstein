@@ -1,0 +1,12 @@
+# ninja log v5
+240	1652	7539812074351821	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3df77d58c9899d44
+1655	2033	7539812078564068	C:/temp/JaydenF/Trumpenstein/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/j3w1r5e1/obj/arm64-v8a/libswappywrapper.so	61606345187ed1c4
+183	2597	7539812084136016	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e4ee638edbec2ae1
+229	2692	7539812085086015	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	f82c924696edc054
+96	2725	7539812085465998	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	12ead8bbf3a7e0e9
+206	2769	7539812085875986	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	dbc68e6484b1930c
+219	2797	7539812086155978	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b89a135b520ea47d
+105	2818	7539812086385984	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3dde026e4781d0ec
+195	2908	7539812087265955	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	e1a6c791813095fe
+5	2941	7539812087626803	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f29bc6ba214dac55
+2941	3197	7539812090129673	C:/temp/JaydenF/Trumpenstein/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/j3w1r5e1/obj/arm64-v8a/libgame.so	4c1be402fc2fbdcb
