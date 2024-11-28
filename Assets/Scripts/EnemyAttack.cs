@@ -19,10 +19,13 @@ public class EnemyAttack : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public Animator animator;
+    public PlayerMove playerScript;
+    
 
     private void Start()
     {
-      
+        animator.Play("Idle");
+     playerScript  = GetComponent<PlayerMove>();
       animator = GetComponent<Animator>();  
       animator.SetBool("Walk", false);
     }
@@ -39,16 +42,20 @@ public class EnemyAttack : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange || !playerInAttackRange) Patrolling();
-        if (playerInSightRange ||  !playerInAttackRange) ChasePlayer();
+       // if (playerInSightRange ||  !playerInAttackRange) ChasePlayer();
         if (playerInSightRange || playerInAttackRange) AttackPlayer();  
     }
     private void Patrolling()
     {
         animator.SetBool("Walk", true);
-        if (!walkPointSet) SearchWalkPoint();
+        if (!walkPointSet)
+        {
+            SearchWalkPoint();
+        }
         if (walkPointSet)
+        {
             agent.SetDestination(walkPoint);
-
+        }
         Vector3 distanceToWalkPoint = transform.position - walkPoint;  
 
         if (distanceToWalkPoint.magnitude <1f)
@@ -64,11 +71,11 @@ public class EnemyAttack : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f,whatIsGround))
             walkPointSet = true;    
     }
-    private void ChasePlayer()
+  /*  private void ChasePlayer()
     {
         animator.SetBool("Walk", true);
         agent.SetDestination(player.position);
-    }
+    } */
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
@@ -78,10 +85,10 @@ public class EnemyAttack : MonoBehaviour
         {
 
             //attack
-
-
-            animator.SetTrigger("Attack");
             
+            animator.SetBool("Walk", false);
+            animator.SetTrigger("Attack");
+            playerScript.health = playerScript.health - 15f;
 
 
 

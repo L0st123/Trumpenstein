@@ -18,8 +18,7 @@ public class CameraLook : MonoBehaviour
     {
        
 
-        Debug.Log(XMove);
-        Debug.Log(YMove);
+        
         XRotation -= YMove;
         XRotation = Mathf.Clamp(XRotation, -90f, 90f);
 
