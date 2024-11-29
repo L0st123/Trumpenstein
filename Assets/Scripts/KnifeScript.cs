@@ -4,11 +4,12 @@ using UnityEngine.UI;
 public class KnifeScript : MonoBehaviour
 {
     Animator animator;
-    bool attack;
+    string attack;
     public float ammo;
     public string ammoValue;
     public string textValue;
     public Text textElement;
+    public Button button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,5 +33,15 @@ public class KnifeScript : MonoBehaviour
         }
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
+        enemyDamage();
+        Debug.Log(EnemyAttack.instance.enemyHealth);
+    }
+
+    public void enemyDamage()
+    {
+        if (EnemyAttack.instance.playerInAttackRange && button != null)
+        {
+            EnemyAttack.instance.TakeDamage(10);
+        }
     }
 }

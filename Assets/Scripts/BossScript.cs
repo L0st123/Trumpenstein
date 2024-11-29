@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-public class EnemyAttack : MonoBehaviour
+public class BossAttack : MonoBehaviour
 {
-    public float enemyHealth; 
+    public float enemyHealth;
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
@@ -20,36 +20,36 @@ public class EnemyAttack : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public Animator animator;
-   
+
     int waypointIndex;
     Vector3 target;
     public Transform[] waypoints;
-    
+
     public string textValue;
     public int score;
     public string scoreValue;
 
     public CapsuleCollider capsuleCollider;
     public Text textElement;
-    public static EnemyAttack instance;
+    public static BossAttack instance;
 
     public GameObject enemyGameObject;
-    
+
     private void Start()
     {
-        
-            UpdateDestination();
-        
-         enemyHealth = 100;
+
+        UpdateDestination();
+
+        enemyHealth = 100;
 
         animator.Play("Idle");
-         
+
         textElement.text = scoreValue;
 
 
-        animator = GetComponent<Animator>();  
-      animator.SetBool("Walk", false);
-        
+        animator = GetComponent<Animator>();
+        animator.SetBool("Walk", false);
+
     }
     private void Awake()
     {
@@ -61,7 +61,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
-        
+
         IterateWaypointIndex();
         scoreValue = score.ToString();
         textElement.text = scoreValue;
@@ -86,7 +86,7 @@ public class EnemyAttack : MonoBehaviour
         {
 
         }
-            
+
 
 
 
@@ -106,30 +106,30 @@ public class EnemyAttack : MonoBehaviour
 
             waypointIndex = 0;
         }
-        
+
 
     }
-   
-  /*  private void SearchWalkPoint()
-     {
-        Debug.Log("searching");
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x +randomX, transform.position.y, transform.position.z + randomZ);
-        //checks if in map
-        if (Physics.Raycast(walkPoint, -transform.up, 2f,whatIsGround))
-            walkPointSet = true;    
-    }
-    private void ChasePlayer()
-    {
-        Debug.Log("player located, chasing");
-        animator.SetBool("Walk", true);
-        return;
-        
-    }
-  */
-    
+    /*  private void SearchWalkPoint()
+       {
+          Debug.Log("searching");
+          float randomZ = Random.Range(-walkPointRange, walkPointRange);
+          float randomX = Random.Range(-walkPointRange, walkPointRange);
+
+          walkPoint = new Vector3(transform.position.x +randomX, transform.position.y, transform.position.z + randomZ);
+          //checks if in map
+          if (Physics.Raycast(walkPoint, -transform.up, 2f,whatIsGround))
+              walkPointSet = true;    
+      }
+      private void ChasePlayer()
+      {
+          Debug.Log("player located, chasing");
+          animator.SetBool("Walk", true);
+          return;
+
+      }
+    */
+
     private void AttackPlayer()
     {
 
@@ -158,7 +158,7 @@ public class EnemyAttack : MonoBehaviour
         {
             return;
         }
-      
+
 
     }
 
@@ -169,23 +169,23 @@ public class EnemyAttack : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
+
         enemyHealth -= damage;
 
         if (enemyHealth <= 0)
         {
-              
-            
-            score = score + 300;
-             
+
+
+            score = score + 10000;
+
             animator.SetTrigger("Dead");
-            
+
             Destroy(capsuleCollider);
 
 
-            
-            
-            
+
+
+
         }
     }
 

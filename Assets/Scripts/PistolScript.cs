@@ -8,15 +8,17 @@ public class PistolScript : MonoBehaviour
    public bool attack;
     public float ammo;
     public string ammoValue;
-   public string textValue;
+   
     public Text textElement;
-
+    public Button button;
+    public GameObject pistol;
+    public GameObject knife; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ammo = 8f;
         ammoValue = ammo.ToString();    
-        textElement.text = textValue;   
+        textElement.text = ammoValue;   
         
         animator = gameObject.GetComponent<Animator>();
         
@@ -31,6 +33,20 @@ public class PistolScript : MonoBehaviour
     {
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
-        ammo = ammo - 1; 
+        enemyDamage();
+        ammo = ammo - 1f;
+        ammoValue = ammo.ToString();
+        if (ammo == 0f)
+        {
+            pistol.SetActive(false);
+            knife.SetActive(true); 
+        }
+    }
+    public void enemyDamage()
+    {
+        if (EnemyAttack.instance.playerInAttackRange && button != null)
+        {
+            EnemyAttack.instance.TakeDamage(15);
+        }
     }
 }
