@@ -5,14 +5,13 @@ public class Weapon_Swap : MonoBehaviour
     public GameObject Pistol;
     public GameObject Knife;
     public GameObject MachineGun;
+    public GameObject weapon;
    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GetComponent<KnifeScript>();    
-        GetComponent<MachineGunScript>();
-        GetComponent<PistolScript>();    
+        MachineGun.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,15 +19,22 @@ public class Weapon_Swap : MonoBehaviour
     {
         
     }
-    void PlayAnimation()
+    void OnTriggerEnter(Collider other)
     {
-        
-        if (Pistol && MachineGun == null)
-        {
-            Knife.SetActive(true);
-            MachineGun.SetActive(false);
+            Knife.SetActive(false);
+            MachineGun.SetActive(true);
             Pistol.SetActive(false);
+            
+
+        if (MachineGun == true)
+        {
+            weapon.SetActive(false);
+            GetComponent<Collider>().enabled = false;
         }
+       
+        
+
 
     }
+     
 }

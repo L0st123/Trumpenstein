@@ -5,16 +5,13 @@ public class KnifeScript : MonoBehaviour
 {
     Animator animator;
     string attack;
-    public float ammo;
-    public string ammoValue;
-    public string textValue;
-    public Text textElement;
     public Button button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ammoValue = ("N/A");
-        textElement.text = ammoValue;
+        AmmoCollect.ammoValue = 0;
+     
+
         
         animator = gameObject.GetComponent<Animator>();
 
@@ -23,7 +20,7 @@ public class KnifeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textElement.text = ammoValue;
+       
     }
     public void PlayAnimation()
     {
@@ -33,6 +30,7 @@ public class KnifeScript : MonoBehaviour
         }
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
+        AmmoCollect.ammoValue =+ 0;
         enemyDamage();
         Debug.Log(EnemyAttack.instance.enemyHealth);
     }

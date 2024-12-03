@@ -3,21 +3,18 @@ using UnityEngine.UI;
 
 public class MachineGunScript : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     public float ammo;
-    public string ammoValue;
-    public string textValue;
-    public Text textElement;
     public GameObject machineGun;
     public GameObject knife;
+    public GameObject pistol;
     public Button button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ammo = 6f;
-        ammoValue = ammo.ToString();
-        textElement.text = textValue;
-
+        machineGun.SetActive(true);
+        AmmoCollect.ammoValue = 6;
+        
         animator = gameObject.GetComponent<Animator>();
 
     }
@@ -25,7 +22,7 @@ public class MachineGunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textElement.text = ammoValue;
+        
     }
     public void PlayAnimation()
     {
@@ -36,10 +33,11 @@ public class MachineGunScript : MonoBehaviour
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
         enemyDamage();
-        ammo = ammo - 1;
+        AmmoCollect.ammoValue -= 1;
         if (ammo == 0f)
         {
             machineGun.SetActive(false);
+            pistol.SetActive(false);
             knife.SetActive(true);
         }
 

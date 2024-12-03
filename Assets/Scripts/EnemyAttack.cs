@@ -24,13 +24,9 @@ public class EnemyAttack : MonoBehaviour
     int waypointIndex;
     Vector3 target;
     public Transform[] waypoints;
-    
-    public string textValue;
-    public int score;
-    public string scoreValue;
-
+         
     public CapsuleCollider capsuleCollider;
-    public Text textElement;
+   
     public static EnemyAttack instance;
 
     public GameObject enemyGameObject;
@@ -44,7 +40,7 @@ public class EnemyAttack : MonoBehaviour
 
         animator.Play("Idle");
          
-        textElement.text = scoreValue;
+       
 
 
         animator = GetComponent<Animator>();  
@@ -63,8 +59,7 @@ public class EnemyAttack : MonoBehaviour
     {
         
         IterateWaypointIndex();
-        scoreValue = score.ToString();
-        textElement.text = scoreValue;
+      
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -109,7 +104,7 @@ public class EnemyAttack : MonoBehaviour
         
 
     }
-   
+   /// <BROKENATM>
   /*  private void SearchWalkPoint()
      {
         Debug.Log("searching");
@@ -174,9 +169,9 @@ public class EnemyAttack : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
-              
-            
-            score = score + 300;
+
+
+            ScoreCollect.scoreValue += 300;
              
             animator.SetTrigger("Dead");
             

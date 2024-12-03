@@ -16,9 +16,12 @@ public class PlayerMove : MonoBehaviour
     public static PlayerMove instance;
     public GameObject deathScreen;
     public GameObject userInterface;
+    public float ammo;  
+
      
     void Start()
     {
+        
         playerHealth = 100f;
         healthValue = playerHealth.ToString();
         controller = GetComponent<CharacterController>();
