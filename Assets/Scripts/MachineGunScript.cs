@@ -45,16 +45,5 @@ public class MachineGunScript : MonoBehaviour
     }
     public void enemyDamage()
     {
-        if (EnemyAttack.instance.playerInAttackRange && button != null)
-        {
-            EnemyAttack.instance.TakeDamage(20);
-           
-        }
-        if (bossScript.instance.playerInAttackRange && button != null)
-        {
-            bossScript.instance.TakeDamage(20);
-
-
-        }
     }
 }

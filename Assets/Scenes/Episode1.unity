@@ -3142,7 +3142,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -4833,7 +4833,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -6648,6 +6648,7 @@ GameObject:
   - component: {fileID: 414942673}
   - component: {fileID: 414942674}
   - component: {fileID: 414942676}
+  - component: {fileID: 414942677}
   m_Layer: 7
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -6859,6 +6860,18 @@ MonoBehaviour:
   dynamicJoystick: {fileID: 1696247980}
   playerBody: {fileID: 414942668}
   sensitivity: 5
+--- !u!114 &414942677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414942660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0544dd54a7b2f4d4a8feb5d35841dd26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &415051032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7096,7 +7109,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -11763,7 +11776,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -20359,7 +20372,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -21830,7 +21843,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -25777,7 +25790,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -26018,7 +26031,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -26680,7 +26693,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: waypoints.Array.size
@@ -27664,7 +27677,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
@@ -28622,7 +28635,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -32414,7 +32427,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 410488985}
+      - m_Target: {fileID: 392253801}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -33275,6 +33288,7 @@ MonoBehaviour:
   enemyHealth: 0
   agent: {fileID: 1628464071486651850}
   player: {fileID: 414942668}
+  playerPistol: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -33283,7 +33297,7 @@ MonoBehaviour:
     m_Bits: 128
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 1.5
   sightRange: 8
   attackRange: 8
   playerInSightRange: 0
@@ -33891,7 +33905,7 @@ PrefabInstance:
       objectReference: {fileID: 1001027533}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: timeBetweenAttacks
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514967431126274339, guid: 400908d777e045247bf18f63a5bc787c, type: 3}
       propertyPath: 'waypoints.Array.data[0]'

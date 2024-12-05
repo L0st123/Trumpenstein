@@ -22,26 +22,16 @@ public class KnifeScript : MonoBehaviour
     }
     public void PlayAnimation()
     {
-        
-        
+        PlayerScript.playerIsAttacking = true;
+
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
         
-        enemyDamage();
-        Debug.Log(EnemyAttack.instance.enemyHealth);
+        
+        //Debug.Log(EnemyAttack.instance.enemyHealth);
     }
 
     public void enemyDamage()
     {
-        if (EnemyAttack.instance.playerInAttackRange && button != null)
-        {
-            EnemyAttack.instance.TakeDamage(10);
-        }
-        if (bossScript.instance.playerInAttackRange && button != null)
-        {
-            bossScript.instance.TakeDamage(10);
-
-
-        }
     }
 }

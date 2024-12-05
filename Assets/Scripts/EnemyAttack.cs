@@ -8,6 +8,9 @@ public class EnemyAttack : MonoBehaviour
     public float enemyHealth; 
     public NavMeshAgent agent;
     public Transform player;
+    public GameObject playerPistol;
+    PistolScript pistolScript;
+
     public LayerMask whatIsGround, whatIsPlayer;
 
     public Vector3 walkPoint;
@@ -27,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
          
     public CapsuleCollider capsuleCollider;
    
-    public static EnemyAttack instance;
+    //public static EnemyAttack instance;
 
     public GameObject enemyGameObject;
     Rigidbody rb;
@@ -47,12 +50,11 @@ public class EnemyAttack : MonoBehaviour
 
         animator = GetComponent<Animator>();  
       animator.SetBool("Walk", false);
-        
-    }
-    private void Awake()
-    {
-        instance = this;
+        //instance = this;
         player = GameObject.Find("PlayerBody").transform;
+        playerPistol = GameObject.Find("Pistol");
+        pistolScript = playerPistol.GetComponent<PistolScript>();
+
         agent = GetComponent<NavMeshAgent>();
 
     }
@@ -67,7 +69,13 @@ public class EnemyAttack : MonoBehaviour
 
         //  if (!playerInSightRange || !playerInAttackRange) Patrolling();
         //  if (playerInSightRange ||  !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange || playerInAttackRange) { AttackPlayer(); }
+        if (playerInSightRange || playerInAttackRange)
+        {
+            AttackPlayer();
+
+
+        }
+
         if (enemyHealth > 0)
         {
             if (!playerInAttackRange)
@@ -87,8 +95,10 @@ public class EnemyAttack : MonoBehaviour
         {
 
         }
-            
 
+
+
+        CheckForPlayerAttacking();
 
 
 
@@ -180,8 +190,9 @@ public class EnemyAttack : MonoBehaviour
             ScoreCollect.scoreValue += 300;
              
             animator.SetTrigger("Dead");
-            
-            Destroy(enemyGameObject);
+
+            Destroy(gameObject, 3f);
+           
 
 
             
@@ -191,5 +202,22 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
+    void CheckForPlayerAttacking()
+    {
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        // check for player weapon type
+        if (PlayerScript.playerIsAttacking == true )
+        {
+            if (playerInAttackRange)
+            {
+                PlayerScript.playerIsAttacking = false;
+                print("player is attacking");
+                TakeDamage(15);
+            }
+        }
+
+    }
 
 }

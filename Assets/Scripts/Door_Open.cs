@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door_Open : MonoBehaviour
 {
@@ -18,8 +19,7 @@ public class Door_Open : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(gameObject.name + " is pressed");
-        door = true;
-        animator.SetBool("Open", true);
+        SceneManager.LoadScene("Main-Menu");
       // DoorOpen.Play();
 
     }

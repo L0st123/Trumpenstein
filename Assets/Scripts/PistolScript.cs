@@ -1,6 +1,4 @@
-using Unity.Notifications.iOS;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PistolScript : MonoBehaviour
@@ -13,11 +11,13 @@ public class PistolScript : MonoBehaviour
     public GameObject knife;
     
     
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AmmoCollect.ammoValue = 8;
         animator = gameObject.GetComponent<Animator>();
+        
         
     }
 
@@ -32,12 +32,11 @@ public class PistolScript : MonoBehaviour
     }
     public void  PlayAnimation()
     {
+        PlayerScript.playerIsAttacking=true;
         
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
-        enemyDamage();
-        
-        
+       
         AmmoCollect.ammoValue -= 1;
 
        
@@ -46,19 +45,14 @@ public class PistolScript : MonoBehaviour
     }
     public void enemyDamage()
     {
-        print("enemy health" + EnemyAttack.instance.enemyHealth);
-        if (EnemyAttack.instance.playerInAttackRange && button != null)
-        {
-            EnemyAttack.instance.TakeDamage(15);
-            EnemyAttack.instance.enemyHealth = EnemyAttack.instance.enemyHealth - 15;
-            
+       
+      
+        
+    }
 
-        }
-        if (bossScript.instance.playerInAttackRange && button != null)
-        {
-            bossScript.instance.TakeDamage(15);
 
-        }
+    void CheckForEnemyHit()
+    {
         
     }
 }

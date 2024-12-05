@@ -24,7 +24,7 @@ public class EnemyDamage : MonoBehaviour
             {
                 nearestObject = allObjectsWithTag[i];
                 distanceToCurrent = distanceToNearest;
-                EnemyAttack.instance.enemyHealth = EnemyAttack.instance.enemyHealth - 15;
+                //EnemyAttack.instance.enemyHealth = EnemyAttack.instance.enemyHealth - 15;
             }
 
             foreach (GameObject g in allObjectsWithTag)
