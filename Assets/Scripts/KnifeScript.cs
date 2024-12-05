@@ -9,10 +9,8 @@ public class KnifeScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AmmoCollect.ammoValue = 0;
-     
+        AmmoCollect.ammoValue = AmmoCollect.ammoValue + 0;
 
-        
         animator = gameObject.GetComponent<Animator>();
 
     }
@@ -20,17 +18,15 @@ public class KnifeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        AmmoCollect.ammoValue = AmmoCollect.ammoValue + 0;
     }
     public void PlayAnimation()
     {
-        if (animator == null)
-        {
-            return;
-        }
+        
+        
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
-        AmmoCollect.ammoValue =+ 0;
+        
         enemyDamage();
         Debug.Log(EnemyAttack.instance.enemyHealth);
     }
@@ -40,6 +36,12 @@ public class KnifeScript : MonoBehaviour
         if (EnemyAttack.instance.playerInAttackRange && button != null)
         {
             EnemyAttack.instance.TakeDamage(10);
+        }
+        if (bossScript.instance.playerInAttackRange && button != null)
+        {
+            bossScript.instance.TakeDamage(10);
+
+
         }
     }
 }

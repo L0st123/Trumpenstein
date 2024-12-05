@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Episode1.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Options.unity
+    path: Assets/Scenes/Sound.unity
     guid: cfcad4f2428a6a843b20009c8ffd4d90
+  - enabled: 1
+    path: Assets/Scenes/How-To-Play.unity
+    guid: 9ba22b54f5a1cde40ae0d1481447d2c7
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 3676af3287ecbf242bb6d84676283f5a
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: cb2a90c453c8f904b94f56b0a1552d57
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: caef4673633b7e94ba1086e5f5e1bd25, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1db3dccfd8dfec044901a90bbf159d00, type: 2}

@@ -11,7 +11,8 @@ public class PistolScript : MonoBehaviour
     public Button button;
     public GameObject pistol;
     public GameObject knife;
-    AudioManagerScript audioManagerScript;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,28 +24,38 @@ public class PistolScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+        if (AmmoCollect.ammoValue == 0)
+        {
+            knife.SetActive(true);
+            pistol.SetActive(false);
+        }
     }
     public void  PlayAnimation()
     {
+        enemyDamage();
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
-        enemyDamage();
+        
+        
         AmmoCollect.ammoValue -= 1;
 
-        audioManagerScript.PlaySFX(2);
+       
         
-        if (AmmoCollect.ammoValue == 0f)
-        {
-            pistol.SetActive(false);
-            knife.SetActive(true); 
-        }
+       
     }
     public void enemyDamage()
     {
         if (EnemyAttack.instance.playerInAttackRange && button != null)
         {
             EnemyAttack.instance.TakeDamage(15);
+            
+
         }
+       /* if (bossScript.instance.playerInAttackRange && button != null)
+        {
+            bossScript.instance.TakeDamage(15);
+       */
+
+        
     }
 }

@@ -1,17 +1,26 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon_Swap : MonoBehaviour
 {
-    public GameObject Pistol;
-    public GameObject Knife;
-    public GameObject MachineGun;
+    public GameObject pistol;
+    public GameObject knife;
+    public GameObject machineGun;
     public GameObject weapon;
-   
+    public static Weapon_Swap instance;
+    public GameObject pistolButton; 
+    public GameObject machineGunButton;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        MachineGun.SetActive(false);
+        machineGun.SetActive(false);
+    }
+     void Awake()
+    {
+        instance = this;    
     }
 
     // Update is called once per frame
@@ -21,12 +30,17 @@ public class Weapon_Swap : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-            Knife.SetActive(false);
-            MachineGun.SetActive(true);
-            Pistol.SetActive(false);
+        
+        pistolButton.SetActive(false ); 
+        machineGunButton.SetActive(true );
+        machineGun.SetActive(true);    
+        Destroy(pistol);
+        knife.SetActive(false);
+       
+        
             
 
-        if (MachineGun == true)
+        if (machineGun == true)
         {
             weapon.SetActive(false);
             GetComponent<Collider>().enabled = false;

@@ -12,8 +12,8 @@ public class MachineGunScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        machineGun.SetActive(true);
-        AmmoCollect.ammoValue = 6;
+       
+        AmmoCollect.ammoValue = 35;
         
         animator = gameObject.GetComponent<Animator>();
 
@@ -22,24 +22,25 @@ public class MachineGunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (AmmoCollect.ammoValue == 0)
+        {
+            knife.SetActive(true);
+            machineGun.SetActive(false);
+        }
     }
     public void PlayAnimation()
     {
-        if (animator == null)
-        {
-            return;
-        }
+        
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
         enemyDamage();
         AmmoCollect.ammoValue -= 1;
-        if (ammo == 0f)
+
+        if (AmmoCollect.ammoValue == 0)
         {
-            machineGun.SetActive(false);
-            pistol.SetActive(false);
             knife.SetActive(true);
-        }
+            machineGun.SetActive(false);
+        } 
 
     }
     public void enemyDamage()
@@ -47,6 +48,13 @@ public class MachineGunScript : MonoBehaviour
         if (EnemyAttack.instance.playerInAttackRange && button != null)
         {
             EnemyAttack.instance.TakeDamage(20);
+           
+        }
+        if (bossScript.instance.playerInAttackRange && button != null)
+        {
+            bossScript.instance.TakeDamage(20);
+
+
         }
     }
 }

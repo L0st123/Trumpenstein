@@ -25,6 +25,13 @@ public class LevelManager : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Sound()
+    {
+        SceneManager.LoadScene("Sound");
+    }
+    public void HowTo()
+    {
+        SceneManager.LoadScene("How-To-Play");
+    }
 
-  
 }

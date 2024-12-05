@@ -10,9 +10,8 @@ public class PlayerMove : MonoBehaviour
     public FixedJoystick joystick;
     public float SpeedMove = 5f;
     private CharacterController controller;
-    public float playerHealth;
     public string healthValue;
-    public Text textElement;
+ 
     public static PlayerMove instance;
     public GameObject deathScreen;
     public GameObject userInterface;
@@ -22,8 +21,8 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         
-        playerHealth = 100f;
-        healthValue = playerHealth.ToString();
+        healthCollect.healthValue = 100;
+        
         controller = GetComponent<CharacterController>();
 
         
@@ -40,7 +39,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 Move = transform.right * joystick.Horizontal + transform.forward * joystick.Vertical;
         controller.Move(Move * SpeedMove * Time.deltaTime);
         healthTaker();
-        textElement.text = healthValue;
+      
     }
 
     public void KillEnemy()
@@ -49,22 +48,21 @@ public class PlayerMove : MonoBehaviour
     }
     public void healthTaker()
     {
-        if (playerHealth <= 0f)
+        if (healthCollect.healthValue <= 0f)
         {
             Debug.Log("player died");
-            userInterface.SetActive(false);
-            deathScreen.SetActive(true);
+            SceneManager.LoadScene("DeathScreen");
 
         }
     }
 
     public void DoDamage( int amount )
     {
-        playerHealth -= amount;
+        healthCollect.healthValue -= amount;
 
 
-        Debug.Log("playerHealth" + playerHealth);
+        Debug.Log("playerHealth" + healthCollect.healthValue);
 
-        healthValue = playerHealth.ToString();
+        
     }
 }

@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-public class EnemyAttack : MonoBehaviour
+public class bossScript : MonoBehaviour
 {
-    public float enemyHealth; 
+    public float enemyHealth;
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
@@ -20,34 +20,34 @@ public class EnemyAttack : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public Animator animator;
-   
+
     int waypointIndex;
     Vector3 target;
     public Transform[] waypoints;
-         
+
     public CapsuleCollider capsuleCollider;
-   
-    public static EnemyAttack instance;
+
+    public static bossScript instance;
 
     public GameObject enemyGameObject;
-    Rigidbody rb;
+
 
     public AudioSource audioSource;
     private void Start()
     {
-        
-            UpdateDestination();
-        
-         enemyHealth = 100;
+
+        UpdateDestination();
+
+        enemyHealth = 200;
 
         animator.Play("Idle");
-         
-       
 
 
-        animator = GetComponent<Animator>();  
-      animator.SetBool("Walk", false);
-        
+
+
+        animator = GetComponent<Animator>();
+        animator.SetBool("Walk", false);
+
     }
     private void Awake()
     {
@@ -59,9 +59,9 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
-        
+
         IterateWaypointIndex();
-      
+
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -78,16 +78,12 @@ public class EnemyAttack : MonoBehaviour
                     UpdateDestination();
                 }
             }
-            if (playerInAttackRange)
-            {
-                new Vector3(0, 0, 0);
-            }
         }
         else
         {
 
         }
-            
+
 
 
 
@@ -107,30 +103,30 @@ public class EnemyAttack : MonoBehaviour
 
             waypointIndex = 0;
         }
-        
+
 
     }
-   /// <BROKENATM>
-  /*  private void SearchWalkPoint()
-     {
-        Debug.Log("searching");
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
+    /// <BROKENATM>
+    /*  private void SearchWalkPoint()
+       {
+          Debug.Log("searching");
+          float randomZ = Random.Range(-walkPointRange, walkPointRange);
+          float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x +randomX, transform.position.y, transform.position.z + randomZ);
-        //checks if in map
-        if (Physics.Raycast(walkPoint, -transform.up, 2f,whatIsGround))
-            walkPointSet = true;    
-    }
-    private void ChasePlayer()
-    {
-        Debug.Log("player located, chasing");
-        animator.SetBool("Walk", true);
-        return;
-        
-    }
-  */
-    
+          walkPoint = new Vector3(transform.position.x +randomX, transform.position.y, transform.position.z + randomZ);
+          //checks if in map
+          if (Physics.Raycast(walkPoint, -transform.up, 2f,whatIsGround))
+              walkPointSet = true;    
+      }
+      private void ChasePlayer()
+      {
+          Debug.Log("player located, chasing");
+          animator.SetBool("Walk", true);
+          return;
+
+      }
+    */
+
     private void AttackPlayer()
     {
 
@@ -144,12 +140,12 @@ public class EnemyAttack : MonoBehaviour
                 //attack
                 animator.SetBool("Walk", false);
 
-                PlayerMove.instance.DoDamage(5);
-                
+                PlayerMove.instance.DoDamage(15);
+                audioSource.Play();
                 animator.SetTrigger("Attack");
                 Debug.Log("attacking");
 
-                audioSource.Play();
+
 
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -159,7 +155,7 @@ public class EnemyAttack : MonoBehaviour
         {
             return;
         }
-      
+
 
     }
 
@@ -170,23 +166,23 @@ public class EnemyAttack : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log ("Enenemy health" + enemyHealth);
+
         enemyHealth -= damage;
 
-        if (enemyHealth <= 0)
+        if (enemyHealth == 0)
         {
 
 
-            ScoreCollect.scoreValue += 300;
-             
+            ScoreCollect.scoreValue += 10000;
+
             animator.SetTrigger("Dead");
-            
-            Destroy(enemyGameObject);
+
+            Destroy(enemyGameObject, 3f);
 
 
-            
-            
-            
+
+
+
         }
     }
 
