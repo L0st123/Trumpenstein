@@ -32,10 +32,11 @@ public class PistolScript : MonoBehaviour
     }
     public void  PlayAnimation()
     {
-        enemyDamage();
+        
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
-        
+        enemyDamage();
+        print("enemy health"+ EnemyAttack.instance.enemyHealth);
         
         AmmoCollect.ammoValue -= 1;
 
@@ -48,14 +49,15 @@ public class PistolScript : MonoBehaviour
         if (EnemyAttack.instance.playerInAttackRange && button != null)
         {
             EnemyAttack.instance.TakeDamage(15);
+            EnemyAttack.instance.enemyHealth = EnemyAttack.instance.enemyHealth - 15;
             
 
         }
-       /* if (bossScript.instance.playerInAttackRange && button != null)
+        if (bossScript.instance.playerInAttackRange && button != null)
         {
             bossScript.instance.TakeDamage(15);
-       */
 
+        }
         
     }
 }
