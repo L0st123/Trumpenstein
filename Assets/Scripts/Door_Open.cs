@@ -13,14 +13,15 @@ public class Door_Open : MonoBehaviour
     void Start()
     {
         door = false;
-        animator.SetBool("Open", false);
     }
-
-    private void OnMouseDown()
+   
+    public void OnMouseDown()
     {
+        animator.SetTrigger("Open");
         Debug.Log(gameObject.name + " is pressed");
-        SceneManager.LoadScene("Main-Menu");
-      // DoorOpen.Play();
+        door =true;
+        
+        // DoorOpen.Play();
 
     }
 

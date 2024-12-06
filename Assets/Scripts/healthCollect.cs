@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class healthCollect : MonoBehaviour
 
@@ -17,6 +17,6 @@ public class healthCollect : MonoBehaviour
     void Update()
     {
         internalHealth = healthValue;
-        healthDisplay.GetComponent<Text>().text = "" + healthValue;
+        healthDisplay.GetComponent<TextMeshProUGUI>().text = "" + healthValue;
     }
 }

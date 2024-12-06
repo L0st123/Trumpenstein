@@ -490,10 +490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bcdd612fe74bee42bae14d9594be27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterSlider: {fileID: 0}
-  SFXSlider: {fileID: 0}
+  myMixer: {fileID: 0}
   musicSlider: {fileID: 0}
-  audioMixer: {fileID: 24100000, guid: cd32720c5f7ecfc46ae87c10dce40e46, type: 2}
+  SFXSlider: {fileID: 0}
+  masterSlider: {fileID: 0}
 --- !u!1 &280378377
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +555,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_sharedMaterial: {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -941,7 +942,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_sharedMaterial: {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1285,7 +1287,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_sharedMaterial: {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1421,7 +1424,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_sharedMaterial: {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -7271997555582516049, guid: 06a1f0c28277d504997a5f95002a3c11, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

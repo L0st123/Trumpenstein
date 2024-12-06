@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class AmmoCollect : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class AmmoCollect : MonoBehaviour
     {
 
         internalAmmo = ammoValue;
-        ammoDisplay.GetComponent<Text>().text = "" + ammoValue;
+        ammoDisplay.GetComponent<TextMeshProUGUI>().text = "" + ammoValue;
 
         if (ammoValue == 0)
         {
