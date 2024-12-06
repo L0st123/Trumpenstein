@@ -30,7 +30,7 @@ public class MachineGunScript : MonoBehaviour
     }
     public void PlayAnimation()
     {
-        
+        PlayerScript.playerIsAttacking = true;
         Debug.Log("Attacking");
         animator.SetTrigger("Attack");
         enemyDamage();

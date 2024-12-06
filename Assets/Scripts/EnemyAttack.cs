@@ -106,7 +106,7 @@ public class EnemyAttack : MonoBehaviour
     void UpdateDestination()
     {
         animator.SetBool("Walk", true);
-        target = waypoints[waypointIndex].position;
+       // target = waypoints[waypointIndex].position;
         agent.SetDestination(target);
     }
     void IterateWaypointIndex()

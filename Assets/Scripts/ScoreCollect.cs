@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreCollect : MonoBehaviour
 {
     public GameObject scoreDisplay; 
-    public static int scoreValue = 0;
+    public static int scoreValue = 10;
     public int internalScore; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +16,6 @@ public class ScoreCollect : MonoBehaviour
     void Update()
     {
         internalScore = scoreValue;
-        scoreDisplay.GetComponent<Text>().text = "" + scoreValue;
+        scoreDisplay.GetComponent<TextMeshProUGUI>().text = "" + scoreValue;
     }
 }
